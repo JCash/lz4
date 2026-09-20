@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Silesia wasm32 codec comparison</title>
+<h1>Silesia wasm32 codec comparison</h1>
+<pre>Running…
+</pre>
+<script type="module">
+import {benchmark} from './compare.mjs';
+const log = text => document.querySelector('pre').textContent += text + '\n';
+const params = new URLSearchParams(location.search);
+const name = params.get('name') || 'codec-comparison';
+async function read(path) {
+    const response = await fetch('../' + path);
+    if (!response.ok) throw Error(path + ': ' + response.status);
+    return new Uint8Array(await response.arrayBuffer());
+}
+async function save(result, suffix) {
+    Object.assign(result, {userAgent: navigator.userAgent, isolated: crossOriginIsolated, date: new Date().toISOString()});
+    const response = await fetch('/results/' + name + suffix, {method: 'POST', body: JSON.stringify(result, null, 2)});
+    if (!response.ok) throw Error('Unable to save results');
+}
+try {
+    const result = await benchmark({sampleCount: Number(params.get('samples') || 7)}, read, log,
+        result => save(result, '-progress'));
+    await save(result, '');
+    log('DONE — all inputs, round trips, and identical stock/patched compressed bytes verified');
+    document.title = 'Codec comparison complete';
+} catch (error) {
+    log('ERROR ' + error.stack);
+    document.title = 'Codec comparison failed';
+}
+</script>

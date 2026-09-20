@@ -1,0 +1,12 @@
+{
+  "validBlocks": 5241,
+  "malformedOrShortOutputCases": 12000,
+  "variants": [
+    "stock",
+    "fast64-asan"
+  ],
+  "exactAllocations": true,
+  "outputGuards": "passed on non-sanitized variants",
+  "differences": [],
+  "errorOffsetDifferences": 0
+}

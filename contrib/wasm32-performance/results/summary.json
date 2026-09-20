@@ -1,0 +1,63 @@
+{
+  "base": {
+    "commit": "0774d05537f9762f838f7ab541b7765f1a729cb5",
+    "version": "1.10.0-dev",
+    "defoldVersion": "1.9.4"
+  },
+  "performance": [
+    {
+      "group": "textures",
+      "MBps": {
+        "defold194": 6689.659301287954,
+        "stock": 6708.709761762088,
+        "fast32": 8586.006348714574,
+        "fast64": 9216.115721224505
+      },
+      "gainPercent": 37.37538287546709,
+      "pairedGainRange": [
+        34.11462632954026,
+        40.51678026754808
+      ]
+    },
+    {
+      "group": "structured",
+      "MBps": {
+        "defold194": 11369.928300715255,
+        "stock": 11365.645947316067,
+        "fast32": 12785.097445273303,
+        "fast64": 12698.22476156956
+      },
+      "gainPercent": 11.724620144164998,
+      "pairedGainRange": [
+        11.162038202510939,
+        13.057163833546381
+      ]
+    }
+  ],
+  "sizes": {
+    "defold194": {
+      "variant": "defold194",
+      "raw": 7983,
+      "gzip": 3626,
+      "brotli": 3010
+    },
+    "stock": {
+      "variant": "stock",
+      "raw": 8073,
+      "gzip": 3661,
+      "brotli": 3072
+    },
+    "fast32": {
+      "variant": "fast32",
+      "raw": 9088,
+      "gzip": 4089,
+      "brotli": 3450
+    },
+    "fast64": {
+      "variant": "fast64",
+      "raw": 9242,
+      "gzip": 4155,
+      "brotli": 3468
+    }
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "variant": "stock",
+    "codec": "default",
+    "direction": "decompress",
+    "bytes": 211938580,
+    "compressed": 101630903,
+    "factor": 2.0853753508418595,
+    "MBps": 4109.101397660257
+  },
+  {
+    "variant": "stock",
+    "codec": "hc9",
+    "direction": "decompress",
+    "bytes": 211938580,
+    "compressed": 77884211,
+    "factor": 2.721200834916335,
+    "MBps": 4812.167905701505
+  },
+  {
+    "variant": "patched",
+    "codec": "memcpy",
+    "direction": "copy",
+    "bytes": 211938580,
+    "compressed": 211938580,
+    "factor": 1.0,
+    "MBps": 71521.57957327222
+  },
+  {
+    "variant": "patched",
+    "codec": "default",
+    "direction": "decompress",
+    "bytes": 211938580,
+    "compressed": 101630903,
+    "factor": 2.0853753508418595,
+    "MBps": 4976.821992775201
+  },
+  {
+    "variant": "patched",
+    "codec": "default",
+    "direction": "compress",
+    "bytes": 211938580,
+    "compressed": 101630903,
+    "factor": 2.0853753508418595,
+    "MBps": 790.3750400338195
+  },
+  {
+    "variant": "patched",
+    "codec": "hc9",
+    "direction": "decompress",
+    "bytes": 211938580,
+    "compressed": 77884211,
+    "factor": 2.721200834916335,
+    "MBps": 5995.885815999138
+  },
+  {
+    "variant": "patched",
+    "codec": "hc9",
+    "direction": "compress",
+    "bytes": 211938580,
+    "compressed": 77884211,
+    "factor": 2.721200834916335,
+    "MBps": 46.83658245116992
+  }
+]

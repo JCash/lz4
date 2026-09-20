@@ -1,0 +1,35 @@
+{
+  "branch": "codex/wasm32-fast-decode",
+  "selectedPatches": [
+    "0001-enable-fast-loop.patch",
+    "0002-wide-copy-loop.patch"
+  ],
+  "validBlocks": 5241,
+  "malformedOrShortOutputCases": 12000,
+  "wasmSanitizers": {
+    "variant": "fast64",
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "assertionsEnabled": true,
+    "passed": true
+  },
+  "wasmFuzzer": {
+    "iterations": 1000,
+    "seed": 1753,
+    "exitCode": 0,
+    "testPortabilityAdjustment": "Use existing malloc/free fallback instead of Unix low-address mmap"
+  },
+  "nativeCheck": {
+    "command": "make -j4 check",
+    "exitCode": 0
+  },
+  "diffCheck": {
+    "command": "git diff --check",
+    "exitCode": 0
+  },
+  "workingTreeMatchesTestedVariant": true,
+  "sizeModuleRebuildIdentical": true,
+  "sizeModuleSha256": "16b8abf1874b33f84f2be9cf8848c334d1488f99514228de08b6c92cc7267df4"
+}

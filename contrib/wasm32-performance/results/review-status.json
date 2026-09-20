@@ -1,0 +1,14 @@
+{
+  "branch": "wasm32-improvements",
+  "sourceSHA256": "a2356381afc5015a400c074bfde0e5c5b87b0968b77501af4f796cfa0bb045a2",
+  "matchesPreviouslySanitizedFast64": true,
+  "wasmOverride0MatchesStockModule": true,
+  "nativeArm64ObjectMatchesStock": true,
+  "silesiaRoundTripsAndIdenticalCompressedBytes": true,
+  "silesiaRuns": [
+    "silesia-browser",
+    "silesia-confirmation"
+  ],
+  "silesiaAllFilesImprovedBothEncoders": true,
+  "memcpyCountedLoopInspected": true
+}

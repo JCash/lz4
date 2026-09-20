@@ -1,0 +1,6 @@
+{
+  "variant": "fast32",
+  "raw": 9088,
+  "gzip": 4089,
+  "brotli": 3450
+}

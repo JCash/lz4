@@ -1,0 +1,6 @@
+Starting LZ4 fuzzer (32-bits, v1.10.0)
+Seed = 1753
+   25      57      89     126     167     203     229     262     292     328     355     385     417     454     485     513     539     573     601     635     667     690     723     753     788     814     844     879     906     939     971      1000 /   1000   - all tests completed successfully 
+compression ratio: 55.409%
+HC compression ratio: 52.371%
+ratio with dict: 34.681%

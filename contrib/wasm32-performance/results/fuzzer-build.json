@@ -1,0 +1,21 @@
+[
+  "/Users/mathiaswesterdahl/work/defold/tmp/dynamo_home/ext/SDKs/emsdk-4.0.6/upstream/emscripten/emcc",
+  "-O1",
+  "-DLZ4_DEBUG=1",
+  "-sALLOW_MEMORY_GROWTH=1",
+  "-sMAXIMUM_MEMORY=4294967296",
+  "-sINITIAL_MEMORY=134217728",
+  "-sSTACK_SIZE=2097152",
+  "-O2",
+  "-I/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/lib",
+  "-I/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/programs",
+  "-I/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/tests",
+  "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/lib/lz4.c",
+  "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/lib/lz4hc.c",
+  "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-source/lib/xxhash.c",
+  "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fuzzer-wasm.c",
+  "-sENVIRONMENT=node",
+  "-sEXIT_RUNTIME=1",
+  "-o",
+  "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/fast64-fuzzer.cjs"
+]

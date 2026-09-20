@@ -1,0 +1,15 @@
+Valid blocks passed: 5241
+{
+  "validBlocks": 5241,
+  "malformedOrShortOutputCases": 12000,
+  "variants": [
+    "stock",
+    "fast64-asan"
+  ],
+  "exactAllocations": true,
+  "outputGuards": "passed on non-sanitized variants",
+  "differences": {
+    "fast64-asan": 0
+  },
+  "errorOffsetDifferences": 0
+}

@@ -1,0 +1,62 @@
+{
+  "base": "0774d05537f9762f838f7ab541b7765f1a729cb5",
+  "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.6 (1ddaae4d2d6dfbb678ecc193bc988820d1fc4633)",
+  "variants": {
+    "stock": {
+      "command": [
+        "/Users/mathiaswesterdahl/work/defold/tmp/dynamo_home/ext/SDKs/emsdk-4.0.6/upstream/emscripten/emcc",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c90",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/harness/silesia.c",
+        "-I/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib/lz4.c",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib/lz4hc.c",
+        "--no-entry",
+        "-sSTANDALONE_WASM=1",
+        "-sFILESYSTEM=0",
+        "-sINITIAL_MEMORY=268435456",
+        "-sSTACK_SIZE=1048576",
+        "-sEXPORTED_FUNCTIONS=[\"_bench\", \"_bound\", \"_malloc\", \"_free\"]",
+        "-o",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock.wasm"
+      ],
+      "wasmSHA256": "7caf4a9a144b7dc19deffa5a421af1bd47af2408e61d6f81c79df686605bf196",
+      "wasmBytes": 26851,
+      "sourceSHA256": {
+        "lz4.c": "53debdc44985bddbe4805e7f385ceae743598e90424b87798def5056363a6845",
+        "lz4.h": "774f26afe507c3ea4e781faca51dfcad719f60804526cef7fe223e3c3e534eef",
+        "lz4hc.c": "53f6c148f243c6b214d80f85f157e690b53329bc44126da6668b7da87d2496ce",
+        "lz4hc.h": "59d7c7e9bce386c74b87346d7f9c35575213205df7adeb712bfc00a97ba0ee7a"
+      }
+    },
+    "patched": {
+      "command": [
+        "/Users/mathiaswesterdahl/work/defold/tmp/dynamo_home/ext/SDKs/emsdk-4.0.6/upstream/emscripten/emcc",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c90",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/harness/silesia.c",
+        "-I/Users/mathiaswesterdahl/notwork/external/lz4/lib",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/lib/lz4.c",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/lib/lz4hc.c",
+        "--no-entry",
+        "-sSTANDALONE_WASM=1",
+        "-sFILESYSTEM=0",
+        "-sINITIAL_MEMORY=268435456",
+        "-sSTACK_SIZE=1048576",
+        "-sEXPORTED_FUNCTIONS=[\"_bench\", \"_bound\", \"_malloc\", \"_free\"]",
+        "-o",
+        "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-patched.wasm"
+      ],
+      "wasmSHA256": "ebb1eb4338b8f9833565cdbbdfaa4368935f84f00dd90bddf12bf36eeab4908c",
+      "wasmBytes": 28061,
+      "sourceSHA256": {
+        "lz4.c": "a2356381afc5015a400c074bfde0e5c5b87b0968b77501af4f796cfa0bb045a2",
+        "lz4.h": "774f26afe507c3ea4e781faca51dfcad719f60804526cef7fe223e3c3e534eef",
+        "lz4hc.c": "53f6c148f243c6b214d80f85f157e690b53329bc44126da6668b7da87d2496ce",
+        "lz4hc.h": "59d7c7e9bce386c74b87346d7f9c35575213205df7adeb712bfc00a97ba0ee7a"
+      }
+    }
+  }
+}

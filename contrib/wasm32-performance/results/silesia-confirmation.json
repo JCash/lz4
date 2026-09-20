@@ -1,0 +1,3437 @@
+{
+  "sampleCount": 7,
+  "targetMs": 100,
+  "corpus": {
+    "source": "https://sun.aei.polsl.pl/~sdeor/index.php?page=silesia",
+    "files": [
+      {
+        "name": "dickens",
+        "size": 10192446,
+        "md5": "88334708559f6db57d79096bc0aca07e",
+        "sha256": "b24c37886142e11d0ee687db6ab06f936207aa7f2ea1fd1d9a36763c7a507e6a",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/dickens.bz2"
+      },
+      {
+        "name": "mozilla",
+        "size": 51220480,
+        "md5": "c7789a2097f1ff944b0c737430a339b3",
+        "sha256": "657fc3764b0c75ac9de9623125705831ebbfbe08fed248df73bc2dc66e2a963b",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/mozilla.bz2"
+      },
+      {
+        "name": "mr",
+        "size": 9970564,
+        "md5": "38e623e3093b7bf2003ca4b1bbc19927",
+        "sha256": "68637ed52e3e4860174ed2dc0840ac77d5f1a60abbcb13770d5754e3774d53e6",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/mr.bz2"
+      },
+      {
+        "name": "nci",
+        "size": 33553445,
+        "md5": "31f85bc8706f3c921104e7c169e2e2e1",
+        "sha256": "fc63a31770947b8c2062d3b19ca94c00485a232bb91b502021948fee983e1635",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/nci.bz2"
+      },
+      {
+        "name": "ooffice",
+        "size": 6152192,
+        "md5": "573c4ae915e36631d8f2dcffb9b9b66d",
+        "sha256": "e7ee013880d34dd5208283d0d3d91b07f442e067454276095ded14f322a656eb",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/ooffice.bz2"
+      },
+      {
+        "name": "osdb",
+        "size": 10085684,
+        "md5": "e734b0c48e6a982adfb5802da3032ecd",
+        "sha256": "60f027179302ca3ad87c58ac90b6be72ec23588aaa7a3b7fe8ecc0f11def3fa3",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/osdb.bz2"
+      },
+      {
+        "name": "reymont",
+        "size": 6627202,
+        "md5": "d8f54d78105079775f32d76dc55fc671",
+        "sha256": "0eac0114a3dfe6e2ee1f345a0f79d653cb26c3bc9f0ed79238af4933422b7578",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/reymont.bz2"
+      },
+      {
+        "name": "samba",
+        "size": 21606400,
+        "md5": "154eaea7ea70e89f6339ff0abf4112ca",
+        "sha256": "93ba07bc44d8267789c1d911992f40b089ffa2140b4a160fac11ccae9a40e7b2",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/samba.bz2"
+      },
+      {
+        "name": "sao",
+        "size": 7251944,
+        "md5": "79e95a22e18cd82b7e42bf91b380d30b",
+        "sha256": "c2d0ea2cc59d4c21b7fe43a71499342a00cbe530a1d5548770e91ecd6214adcc",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/sao.bz2"
+      },
+      {
+        "name": "webster",
+        "size": 41458703,
+        "md5": "474931ad907ac27bf962c75ded46c069",
+        "sha256": "6a68f69b26daf09f9dd84f7470368553194a0b294fcfa80f1604efb11143a383",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/webster.bz2"
+      },
+      {
+        "name": "xml",
+        "size": 5345280,
+        "md5": "9b09c0c80104adb8aae910b7d7db003e",
+        "sha256": "0e82e54e695c1938e4193448022543845b33020c8be6bf3bf3ead2224903e08c",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/xml.bz2"
+      },
+      {
+        "name": "x-ray",
+        "size": 8474240,
+        "md5": "9baec32ad14ec3eff487d254382cb91c",
+        "sha256": "7de9fce1405dc44ae5e6813ed21cd5751e761bd4265655a005d39b9685d1c9ad",
+        "url": "https://sun.aei.polsl.pl/~sdeor/corpus/x-ray.bz2"
+      }
+    ],
+    "bytes": 211938580
+  },
+  "build": {
+    "base": "0774d05537f9762f838f7ab541b7765f1a729cb5",
+    "compiler": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 4.0.6 (1ddaae4d2d6dfbb678ecc193bc988820d1fc4633)",
+    "variants": {
+      "stock": {
+        "command": [
+          "/Users/mathiaswesterdahl/work/defold/tmp/dynamo_home/ext/SDKs/emsdk-4.0.6/upstream/emscripten/emcc",
+          "-O3",
+          "-DNDEBUG",
+          "-std=c90",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/harness/silesia.c",
+          "-I/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib/lz4.c",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock-source/lib/lz4hc.c",
+          "--no-entry",
+          "-sSTANDALONE_WASM=1",
+          "-sFILESYSTEM=0",
+          "-sINITIAL_MEMORY=268435456",
+          "-sSTACK_SIZE=1048576",
+          "-sEXPORTED_FUNCTIONS=[\"_bench\", \"_bound\", \"_malloc\", \"_free\"]",
+          "-o",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-stock.wasm"
+        ],
+        "wasmSHA256": "7caf4a9a144b7dc19deffa5a421af1bd47af2408e61d6f81c79df686605bf196",
+        "wasmBytes": 26851,
+        "sourceSHA256": {
+          "lz4.c": "53debdc44985bddbe4805e7f385ceae743598e90424b87798def5056363a6845",
+          "lz4.h": "774f26afe507c3ea4e781faca51dfcad719f60804526cef7fe223e3c3e534eef",
+          "lz4hc.c": "53f6c148f243c6b214d80f85f157e690b53329bc44126da6668b7da87d2496ce",
+          "lz4hc.h": "59d7c7e9bce386c74b87346d7f9c35575213205df7adeb712bfc00a97ba0ee7a"
+        }
+      },
+      "patched": {
+        "command": [
+          "/Users/mathiaswesterdahl/work/defold/tmp/dynamo_home/ext/SDKs/emsdk-4.0.6/upstream/emscripten/emcc",
+          "-O3",
+          "-DNDEBUG",
+          "-std=c90",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/harness/silesia.c",
+          "-I/Users/mathiaswesterdahl/notwork/external/lz4/lib",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/lib/lz4.c",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/lib/lz4hc.c",
+          "--no-entry",
+          "-sSTANDALONE_WASM=1",
+          "-sFILESYSTEM=0",
+          "-sINITIAL_MEMORY=268435456",
+          "-sSTACK_SIZE=1048576",
+          "-sEXPORTED_FUNCTIONS=[\"_bench\", \"_bound\", \"_malloc\", \"_free\"]",
+          "-o",
+          "/Users/mathiaswesterdahl/notwork/external/lz4/contrib/wasm32-performance/local/build/silesia-patched.wasm"
+        ],
+        "wasmSHA256": "ebb1eb4338b8f9833565cdbbdfaa4368935f84f00dd90bddf12bf36eeab4908c",
+        "wasmBytes": 28061,
+        "sourceSHA256": {
+          "lz4.c": "a2356381afc5015a400c074bfde0e5c5b87b0968b77501af4f796cfa0bb045a2",
+          "lz4.h": "774f26afe507c3ea4e781faca51dfcad719f60804526cef7fe223e3c3e534eef",
+          "lz4hc.c": "53f6c148f243c6b214d80f85f157e690b53329bc44126da6668b7da87d2496ce",
+          "lz4hc.h": "59d7c7e9bce386c74b87346d7f9c35575213205df7adeb712bfc00a97ba0ee7a"
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "file": "dickens",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 10192446,
+      "compressed": 6432049,
+      "rounds": 31,
+      "samples": [
+        {
+          "ms": 100.51999998092651,
+          "rounds": 31
+        },
+        {
+          "ms": 100.80499982833862,
+          "rounds": 31
+        },
+        {
+          "ms": 101.09500002861023,
+          "rounds": 31
+        },
+        {
+          "ms": 101.47000002861023,
+          "rounds": 31
+        },
+        {
+          "ms": 100.53499984741211,
+          "rounds": 31
+        },
+        {
+          "ms": 101.15499997138977,
+          "rounds": 31
+        },
+        {
+          "ms": 101.74000000953674,
+          "rounds": 31
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 10192446,
+      "compressed": 4432823,
+      "rounds": 39,
+      "samples": [
+        {
+          "ms": 98.98499989509583,
+          "rounds": 39
+        },
+        {
+          "ms": 100.63000011444092,
+          "rounds": 39
+        },
+        {
+          "ms": 98.8050000667572,
+          "rounds": 39
+        },
+        {
+          "ms": 100.15000009536743,
+          "rounds": 39
+        },
+        {
+          "ms": 98.69999980926514,
+          "rounds": 39
+        },
+        {
+          "ms": 100.08500003814697,
+          "rounds": 39
+        },
+        {
+          "ms": 99.38499999046326,
+          "rounds": 39
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 10192446,
+      "compressed": 10192446,
+      "rounds": 749,
+      "samples": [
+        {
+          "ms": 99.81000018119812,
+          "rounds": 749
+        },
+        {
+          "ms": 99.51500010490417,
+          "rounds": 749
+        },
+        {
+          "ms": 99.88499999046326,
+          "rounds": 749
+        },
+        {
+          "ms": 99.32499980926514,
+          "rounds": 749
+        },
+        {
+          "ms": 108.09999990463257,
+          "rounds": 749
+        },
+        {
+          "ms": 109.61999988555908,
+          "rounds": 749
+        },
+        {
+          "ms": 108.08999991416931,
+          "rounds": 749
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 10192446,
+      "compressed": 6432049,
+      "rounds": 35,
+      "samples": [
+        {
+          "ms": 102.28500008583069,
+          "rounds": 35
+        },
+        {
+          "ms": 102.88499999046326,
+          "rounds": 35
+        },
+        {
+          "ms": 103.14500021934509,
+          "rounds": 35
+        },
+        {
+          "ms": 101.8050000667572,
+          "rounds": 35
+        },
+        {
+          "ms": 102.31500005722046,
+          "rounds": 35
+        },
+        {
+          "ms": 102.05999994277954,
+          "rounds": 35
+        },
+        {
+          "ms": 102.53000020980835,
+          "rounds": 35
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 10192446,
+      "compressed": 6432049,
+      "rounds": 5,
+      "samples": [
+        {
+          "ms": 107.89999985694885,
+          "rounds": 5
+        },
+        {
+          "ms": 108.96999979019165,
+          "rounds": 5
+        },
+        {
+          "ms": 108.64999985694885,
+          "rounds": 5
+        },
+        {
+          "ms": 109.41000008583069,
+          "rounds": 5
+        },
+        {
+          "ms": 108.34999990463257,
+          "rounds": 5
+        },
+        {
+          "ms": 108.58999991416931,
+          "rounds": 5
+        },
+        {
+          "ms": 109.11500000953674,
+          "rounds": 5
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 10192446,
+      "compressed": 4432823,
+      "rounds": 44,
+      "samples": [
+        {
+          "ms": 100.84500002861023,
+          "rounds": 44
+        },
+        {
+          "ms": 100.48000001907349,
+          "rounds": 44
+        },
+        {
+          "ms": 100.51999998092651,
+          "rounds": 44
+        },
+        {
+          "ms": 100.83500003814697,
+          "rounds": 44
+        },
+        {
+          "ms": 100.08500003814697,
+          "rounds": 44
+        },
+        {
+          "ms": 101.03500008583069,
+          "rounds": 44
+        },
+        {
+          "ms": 101.57000017166138,
+          "rounds": 44
+        }
+      ]
+    },
+    {
+      "file": "dickens",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 10192446,
+      "compressed": 4432823,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 322.10000014305115,
+          "rounds": 1
+        },
+        {
+          "ms": 321.49000000953674,
+          "rounds": 1
+        },
+        {
+          "ms": 321.52999997138977,
+          "rounds": 1
+        },
+        {
+          "ms": 321.8200001716614,
+          "rounds": 1
+        },
+        {
+          "ms": 318.94000005722046,
+          "rounds": 1
+        },
+        {
+          "ms": 320.1800000667572,
+          "rounds": 1
+        },
+        {
+          "ms": 319.72000002861023,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 51220480,
+      "compressed": 26375278,
+      "rounds": 9,
+      "samples": [
+        {
+          "ms": 106.36500000953674,
+          "rounds": 9
+        },
+        {
+          "ms": 106.17499995231628,
+          "rounds": 9
+        },
+        {
+          "ms": 107.00499987602234,
+          "rounds": 9
+        },
+        {
+          "ms": 106.80000019073486,
+          "rounds": 9
+        },
+        {
+          "ms": 107.13000011444092,
+          "rounds": 9
+        },
+        {
+          "ms": 107.82500004768372,
+          "rounds": 9
+        },
+        {
+          "ms": 107.19999980926514,
+          "rounds": 9
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 51220480,
+      "compressed": 22078791,
+      "rounds": 10,
+      "samples": [
+        {
+          "ms": 102.46000003814697,
+          "rounds": 10
+        },
+        {
+          "ms": 103.60999989509583,
+          "rounds": 10
+        },
+        {
+          "ms": 103.59500002861023,
+          "rounds": 10
+        },
+        {
+          "ms": 103.48499989509583,
+          "rounds": 10
+        },
+        {
+          "ms": 103.31500005722046,
+          "rounds": 10
+        },
+        {
+          "ms": 103.73499989509583,
+          "rounds": 10
+        },
+        {
+          "ms": 103.1949999332428,
+          "rounds": 10
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 51220480,
+      "compressed": 51220480,
+      "rounds": 133,
+      "samples": [
+        {
+          "ms": 98.85999989509583,
+          "rounds": 133
+        },
+        {
+          "ms": 98.95000004768372,
+          "rounds": 133
+        },
+        {
+          "ms": 100.24500012397766,
+          "rounds": 133
+        },
+        {
+          "ms": 98.85000014305115,
+          "rounds": 133
+        },
+        {
+          "ms": 100.20499992370605,
+          "rounds": 133
+        },
+        {
+          "ms": 99.03999996185303,
+          "rounds": 133
+        },
+        {
+          "ms": 99.27999997138977,
+          "rounds": 133
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 51220480,
+      "compressed": 26375278,
+      "rounds": 11,
+      "samples": [
+        {
+          "ms": 107.76999998092651,
+          "rounds": 11
+        },
+        {
+          "ms": 107.22499990463257,
+          "rounds": 11
+        },
+        {
+          "ms": 107.99000000953674,
+          "rounds": 11
+        },
+        {
+          "ms": 107.42999982833862,
+          "rounds": 11
+        },
+        {
+          "ms": 107.04999995231628,
+          "rounds": 11
+        },
+        {
+          "ms": 108.53500008583069,
+          "rounds": 11
+        },
+        {
+          "ms": 107.99000000953674,
+          "rounds": 11
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 51220480,
+      "compressed": 26375278,
+      "rounds": 2,
+      "samples": [
+        {
+          "ms": 119.9850001335144,
+          "rounds": 2
+        },
+        {
+          "ms": 119.91000008583069,
+          "rounds": 2
+        },
+        {
+          "ms": 119.81000018119812,
+          "rounds": 2
+        },
+        {
+          "ms": 120.8199999332428,
+          "rounds": 2
+        },
+        {
+          "ms": 119.52500009536743,
+          "rounds": 2
+        },
+        {
+          "ms": 120.61500000953674,
+          "rounds": 2
+        },
+        {
+          "ms": 121.07500004768372,
+          "rounds": 2
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 51220480,
+      "compressed": 22078791,
+      "rounds": 13,
+      "samples": [
+        {
+          "ms": 107.25999999046326,
+          "rounds": 13
+        },
+        {
+          "ms": 108.3050000667572,
+          "rounds": 13
+        },
+        {
+          "ms": 107.32999992370605,
+          "rounds": 13
+        },
+        {
+          "ms": 108.21499991416931,
+          "rounds": 13
+        },
+        {
+          "ms": 108.21000003814697,
+          "rounds": 13
+        },
+        {
+          "ms": 107.91499996185303,
+          "rounds": 13
+        },
+        {
+          "ms": 107.71500015258789,
+          "rounds": 13
+        }
+      ]
+    },
+    {
+      "file": "mozilla",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 51220480,
+      "compressed": 22078791,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 991.3450000286102,
+          "rounds": 1
+        },
+        {
+          "ms": 993.664999961853,
+          "rounds": 1
+        },
+        {
+          "ms": 995.914999961853,
+          "rounds": 1
+        },
+        {
+          "ms": 993.3849999904633,
+          "rounds": 1
+        },
+        {
+          "ms": 990.3199999332428,
+          "rounds": 1
+        },
+        {
+          "ms": 991.7800002098083,
+          "rounds": 1
+        },
+        {
+          "ms": 990.9400000572205,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 9970564,
+      "compressed": 5669219,
+      "rounds": 34,
+      "samples": [
+        {
+          "ms": 100.5550000667572,
+          "rounds": 34
+        },
+        {
+          "ms": 100.67000007629395,
+          "rounds": 34
+        },
+        {
+          "ms": 101.10000014305115,
+          "rounds": 34
+        },
+        {
+          "ms": 100.56500005722046,
+          "rounds": 34
+        },
+        {
+          "ms": 100.47999978065491,
+          "rounds": 34
+        },
+        {
+          "ms": 100.95500016212463,
+          "rounds": 34
+        },
+        {
+          "ms": 102.39499998092651,
+          "rounds": 34
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 9970564,
+      "compressed": 4245211,
+      "rounds": 47,
+      "samples": [
+        {
+          "ms": 100.4449999332428,
+          "rounds": 47
+        },
+        {
+          "ms": 101.10500001907349,
+          "rounds": 47
+        },
+        {
+          "ms": 101.15000009536743,
+          "rounds": 47
+        },
+        {
+          "ms": 98.99000000953674,
+          "rounds": 47
+        },
+        {
+          "ms": 100.98000001907349,
+          "rounds": 47
+        },
+        {
+          "ms": 100.97500014305115,
+          "rounds": 47
+        },
+        {
+          "ms": 101.39499998092651,
+          "rounds": 47
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 9970564,
+      "compressed": 9970564,
+      "rounds": 753,
+      "samples": [
+        {
+          "ms": 101.82500004768372,
+          "rounds": 753
+        },
+        {
+          "ms": 101.57999992370605,
+          "rounds": 753
+        },
+        {
+          "ms": 100.65000009536743,
+          "rounds": 753
+        },
+        {
+          "ms": 100.66999983787537,
+          "rounds": 753
+        },
+        {
+          "ms": 101.33500003814697,
+          "rounds": 753
+        },
+        {
+          "ms": 103.07499980926514,
+          "rounds": 753
+        },
+        {
+          "ms": 103.34000015258789,
+          "rounds": 753
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 9970564,
+      "compressed": 5669219,
+      "rounds": 41,
+      "samples": [
+        {
+          "ms": 103.63499999046326,
+          "rounds": 41
+        },
+        {
+          "ms": 103.03999996185303,
+          "rounds": 41
+        },
+        {
+          "ms": 102.58500003814697,
+          "rounds": 41
+        },
+        {
+          "ms": 102.68499994277954,
+          "rounds": 41
+        },
+        {
+          "ms": 103.19000005722046,
+          "rounds": 41
+        },
+        {
+          "ms": 102.64499998092651,
+          "rounds": 41
+        },
+        {
+          "ms": 104.09500002861023,
+          "rounds": 41
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 9970564,
+      "compressed": 5669219,
+      "rounds": 9,
+      "samples": [
+        {
+          "ms": 108.25999999046326,
+          "rounds": 9
+        },
+        {
+          "ms": 107.12999987602234,
+          "rounds": 9
+        },
+        {
+          "ms": 107.83000016212463,
+          "rounds": 9
+        },
+        {
+          "ms": 108.2649998664856,
+          "rounds": 9
+        },
+        {
+          "ms": 107.2649998664856,
+          "rounds": 9
+        },
+        {
+          "ms": 107.23000001907349,
+          "rounds": 9
+        },
+        {
+          "ms": 109.0849997997284,
+          "rounds": 9
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 9970564,
+      "compressed": 4245211,
+      "rounds": 55,
+      "samples": [
+        {
+          "ms": 99.35999989509583,
+          "rounds": 55
+        },
+        {
+          "ms": 99.625,
+          "rounds": 55
+        },
+        {
+          "ms": 100.10999989509583,
+          "rounds": 55
+        },
+        {
+          "ms": 99.63499999046326,
+          "rounds": 55
+        },
+        {
+          "ms": 99.38499999046326,
+          "rounds": 55
+        },
+        {
+          "ms": 99.8050000667572,
+          "rounds": 55
+        },
+        {
+          "ms": 99.68499994277954,
+          "rounds": 55
+        }
+      ]
+    },
+    {
+      "file": "mr",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 9970564,
+      "compressed": 4245211,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 363.25,
+          "rounds": 1
+        },
+        {
+          "ms": 362.74000000953674,
+          "rounds": 1
+        },
+        {
+          "ms": 364.22500014305115,
+          "rounds": 1
+        },
+        {
+          "ms": 362.539999961853,
+          "rounds": 1
+        },
+        {
+          "ms": 361.34500002861023,
+          "rounds": 1
+        },
+        {
+          "ms": 361.289999961853,
+          "rounds": 1
+        },
+        {
+          "ms": 361.34500002861023,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 33553445,
+      "compressed": 5877051,
+      "rounds": 17,
+      "samples": [
+        {
+          "ms": 104.92499995231628,
+          "rounds": 17
+        },
+        {
+          "ms": 103.6800000667572,
+          "rounds": 17
+        },
+        {
+          "ms": 103.42499995231628,
+          "rounds": 17
+        },
+        {
+          "ms": 102.7649998664856,
+          "rounds": 17
+        },
+        {
+          "ms": 103.97499990463257,
+          "rounds": 17
+        },
+        {
+          "ms": 103.3050000667572,
+          "rounds": 17
+        },
+        {
+          "ms": 102.90499997138977,
+          "rounds": 17
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 33553445,
+      "compressed": 3673771,
+      "rounds": 23,
+      "samples": [
+        {
+          "ms": 100.7350001335144,
+          "rounds": 23
+        },
+        {
+          "ms": 101.26999998092651,
+          "rounds": 23
+        },
+        {
+          "ms": 100.50999999046326,
+          "rounds": 23
+        },
+        {
+          "ms": 100.47499990463257,
+          "rounds": 23
+        },
+        {
+          "ms": 100.92000007629395,
+          "rounds": 23
+        },
+        {
+          "ms": 100.6100001335144,
+          "rounds": 23
+        },
+        {
+          "ms": 101.01500010490417,
+          "rounds": 23
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 33553445,
+      "compressed": 33553445,
+      "rounds": 220,
+      "samples": [
+        {
+          "ms": 102.64499998092651,
+          "rounds": 220
+        },
+        {
+          "ms": 102.64499998092651,
+          "rounds": 220
+        },
+        {
+          "ms": 100.59000015258789,
+          "rounds": 220
+        },
+        {
+          "ms": 101.9850001335144,
+          "rounds": 220
+        },
+        {
+          "ms": 100.83999991416931,
+          "rounds": 220
+        },
+        {
+          "ms": 101.64000010490417,
+          "rounds": 220
+        },
+        {
+          "ms": 101.33999991416931,
+          "rounds": 220
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 33553445,
+      "compressed": 5877051,
+      "rounds": 21,
+      "samples": [
+        {
+          "ms": 100.91000008583069,
+          "rounds": 21
+        },
+        {
+          "ms": 101.20499992370605,
+          "rounds": 21
+        },
+        {
+          "ms": 101.55499982833862,
+          "rounds": 21
+        },
+        {
+          "ms": 101.62999987602234,
+          "rounds": 21
+        },
+        {
+          "ms": 101.21499991416931,
+          "rounds": 21
+        },
+        {
+          "ms": 101.62999987602234,
+          "rounds": 21
+        },
+        {
+          "ms": 102.35000014305115,
+          "rounds": 21
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 33553445,
+      "compressed": 5877051,
+      "rounds": 5,
+      "samples": [
+        {
+          "ms": 105.80999994277954,
+          "rounds": 5
+        },
+        {
+          "ms": 106.375,
+          "rounds": 5
+        },
+        {
+          "ms": 107.09999990463257,
+          "rounds": 5
+        },
+        {
+          "ms": 107.93500018119812,
+          "rounds": 5
+        },
+        {
+          "ms": 106.42000007629395,
+          "rounds": 5
+        },
+        {
+          "ms": 106.72500014305115,
+          "rounds": 5
+        },
+        {
+          "ms": 107.57500004768372,
+          "rounds": 5
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 33553445,
+      "compressed": 3673771,
+      "rounds": 31,
+      "samples": [
+        {
+          "ms": 99.11500000953674,
+          "rounds": 31
+        },
+        {
+          "ms": 100.24000000953674,
+          "rounds": 31
+        },
+        {
+          "ms": 100.0550000667572,
+          "rounds": 31
+        },
+        {
+          "ms": 99.51999998092651,
+          "rounds": 31
+        },
+        {
+          "ms": 99.5,
+          "rounds": 31
+        },
+        {
+          "ms": 100.1800000667572,
+          "rounds": 31
+        },
+        {
+          "ms": 99.56499981880188,
+          "rounds": 31
+        }
+      ]
+    },
+    {
+      "file": "nci",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 33553445,
+      "compressed": 3673771,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 570.6800000667572,
+          "rounds": 1
+        },
+        {
+          "ms": 572.1800000667572,
+          "rounds": 1
+        },
+        {
+          "ms": 571.8199999332428,
+          "rounds": 1
+        },
+        {
+          "ms": 576.454999923706,
+          "rounds": 1
+        },
+        {
+          "ms": 573.3050000667572,
+          "rounds": 1
+        },
+        {
+          "ms": 574.75,
+          "rounds": 1
+        },
+        {
+          "ms": 574.875,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 6152192,
+      "compressed": 4228589,
+      "rounds": 64,
+      "samples": [
+        {
+          "ms": 101.34000015258789,
+          "rounds": 64
+        },
+        {
+          "ms": 101.30999994277954,
+          "rounds": 64
+        },
+        {
+          "ms": 101.50999999046326,
+          "rounds": 64
+        },
+        {
+          "ms": 102.40499997138977,
+          "rounds": 64
+        },
+        {
+          "ms": 101.57499980926514,
+          "rounds": 64
+        },
+        {
+          "ms": 102.46500015258789,
+          "rounds": 64
+        },
+        {
+          "ms": 100.96499991416931,
+          "rounds": 64
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 6152192,
+      "compressed": 3543764,
+      "rounds": 69,
+      "samples": [
+        {
+          "ms": 98.61500000953674,
+          "rounds": 69
+        },
+        {
+          "ms": 98.69999980926514,
+          "rounds": 69
+        },
+        {
+          "ms": 99.22499990463257,
+          "rounds": 69
+        },
+        {
+          "ms": 96.24500012397766,
+          "rounds": 69
+        },
+        {
+          "ms": 98.7649998664856,
+          "rounds": 69
+        },
+        {
+          "ms": 99.5,
+          "rounds": 69
+        },
+        {
+          "ms": 100.35999989509583,
+          "rounds": 69
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 6152192,
+      "compressed": 6152192,
+      "rounds": 1268,
+      "samples": [
+        {
+          "ms": 101.57500004768372,
+          "rounds": 1268
+        },
+        {
+          "ms": 103.75500011444092,
+          "rounds": 1268
+        },
+        {
+          "ms": 102.04500007629395,
+          "rounds": 1268
+        },
+        {
+          "ms": 100.93499994277954,
+          "rounds": 1268
+        },
+        {
+          "ms": 102.36500000953674,
+          "rounds": 1268
+        },
+        {
+          "ms": 102.60500001907349,
+          "rounds": 1268
+        },
+        {
+          "ms": 101.43999981880188,
+          "rounds": 1268
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 6152192,
+      "compressed": 4228589,
+      "rounds": 77,
+      "samples": [
+        {
+          "ms": 99.39499998092651,
+          "rounds": 77
+        },
+        {
+          "ms": 99.71499991416931,
+          "rounds": 77
+        },
+        {
+          "ms": 100.02500009536743,
+          "rounds": 77
+        },
+        {
+          "ms": 98.57000017166138,
+          "rounds": 77
+        },
+        {
+          "ms": 99.2350001335144,
+          "rounds": 77
+        },
+        {
+          "ms": 98.92499995231628,
+          "rounds": 77
+        },
+        {
+          "ms": 99.60999989509583,
+          "rounds": 77
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 6152192,
+      "compressed": 4228589,
+      "rounds": 12,
+      "samples": [
+        {
+          "ms": 106.75500011444092,
+          "rounds": 12
+        },
+        {
+          "ms": 107.16000008583069,
+          "rounds": 12
+        },
+        {
+          "ms": 106.35500001907349,
+          "rounds": 12
+        },
+        {
+          "ms": 106.94500017166138,
+          "rounds": 12
+        },
+        {
+          "ms": 107.15499997138977,
+          "rounds": 12
+        },
+        {
+          "ms": 105.92999982833862,
+          "rounds": 12
+        },
+        {
+          "ms": 106.77999997138977,
+          "rounds": 12
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 6152192,
+      "compressed": 3543764,
+      "rounds": 82,
+      "samples": [
+        {
+          "ms": 100.34500002861023,
+          "rounds": 82
+        },
+        {
+          "ms": 100.19000005722046,
+          "rounds": 82
+        },
+        {
+          "ms": 100.03500008583069,
+          "rounds": 82
+        },
+        {
+          "ms": 99.68499994277954,
+          "rounds": 82
+        },
+        {
+          "ms": 100.55999994277954,
+          "rounds": 82
+        },
+        {
+          "ms": 100.4449999332428,
+          "rounds": 82
+        },
+        {
+          "ms": 99.91499996185303,
+          "rounds": 82
+        }
+      ]
+    },
+    {
+      "file": "ooffice",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 6152192,
+      "compressed": 3543764,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 127.20000004768372,
+          "rounds": 1
+        },
+        {
+          "ms": 126.65499997138977,
+          "rounds": 1
+        },
+        {
+          "ms": 126.76500010490417,
+          "rounds": 1
+        },
+        {
+          "ms": 127.43999981880188,
+          "rounds": 1
+        },
+        {
+          "ms": 126.43500018119812,
+          "rounds": 1
+        },
+        {
+          "ms": 126.74499988555908,
+          "rounds": 1
+        },
+        {
+          "ms": 127.34999990463257,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 10085684,
+      "compressed": 5223143,
+      "rounds": 46,
+      "samples": [
+        {
+          "ms": 102.98000001907349,
+          "rounds": 46
+        },
+        {
+          "ms": 104.43500018119812,
+          "rounds": 46
+        },
+        {
+          "ms": 103.39999985694885,
+          "rounds": 46
+        },
+        {
+          "ms": 103.13000011444092,
+          "rounds": 46
+        },
+        {
+          "ms": 103.38499999046326,
+          "rounds": 46
+        },
+        {
+          "ms": 103.30999994277954,
+          "rounds": 46
+        },
+        {
+          "ms": 103.68499994277954,
+          "rounds": 46
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 10085684,
+      "compressed": 3977505,
+      "rounds": 52,
+      "samples": [
+        {
+          "ms": 99.52999997138977,
+          "rounds": 52
+        },
+        {
+          "ms": 99.11500000953674,
+          "rounds": 52
+        },
+        {
+          "ms": 99.65499997138977,
+          "rounds": 52
+        },
+        {
+          "ms": 97.64499998092651,
+          "rounds": 52
+        },
+        {
+          "ms": 99.0699999332428,
+          "rounds": 52
+        },
+        {
+          "ms": 99.5,
+          "rounds": 52
+        },
+        {
+          "ms": 100,
+          "rounds": 52
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 10085684,
+      "compressed": 10085684,
+      "rounds": 737,
+      "samples": [
+        {
+          "ms": 100.59000015258789,
+          "rounds": 737
+        },
+        {
+          "ms": 100.54500007629395,
+          "rounds": 737
+        },
+        {
+          "ms": 101.34500002861023,
+          "rounds": 737
+        },
+        {
+          "ms": 100.83999991416931,
+          "rounds": 737
+        },
+        {
+          "ms": 101.96500015258789,
+          "rounds": 737
+        },
+        {
+          "ms": 102.46499991416931,
+          "rounds": 737
+        },
+        {
+          "ms": 101.96500015258789,
+          "rounds": 737
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 10085684,
+      "compressed": 5223143,
+      "rounds": 55,
+      "samples": [
+        {
+          "ms": 100.51500010490417,
+          "rounds": 55
+        },
+        {
+          "ms": 101.3050000667572,
+          "rounds": 55
+        },
+        {
+          "ms": 100.68499994277954,
+          "rounds": 55
+        },
+        {
+          "ms": 101.97000002861023,
+          "rounds": 55
+        },
+        {
+          "ms": 100.96000003814697,
+          "rounds": 55
+        },
+        {
+          "ms": 101.03999996185303,
+          "rounds": 55
+        },
+        {
+          "ms": 100.96499991416931,
+          "rounds": 55
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 10085684,
+      "compressed": 5223143,
+      "rounds": 9,
+      "samples": [
+        {
+          "ms": 99.87000012397766,
+          "rounds": 9
+        },
+        {
+          "ms": 100.32499980926514,
+          "rounds": 9
+        },
+        {
+          "ms": 99.46499991416931,
+          "rounds": 9
+        },
+        {
+          "ms": 100.00999999046326,
+          "rounds": 9
+        },
+        {
+          "ms": 100.3050000667572,
+          "rounds": 9
+        },
+        {
+          "ms": 99.85999989509583,
+          "rounds": 9
+        },
+        {
+          "ms": 100.10999989509583,
+          "rounds": 9
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 10085684,
+      "compressed": 3977505,
+      "rounds": 64,
+      "samples": [
+        {
+          "ms": 100.0550000667572,
+          "rounds": 64
+        },
+        {
+          "ms": 101.10500001907349,
+          "rounds": 64
+        },
+        {
+          "ms": 100.90499997138977,
+          "rounds": 64
+        },
+        {
+          "ms": 100.875,
+          "rounds": 64
+        },
+        {
+          "ms": 100.49000000953674,
+          "rounds": 64
+        },
+        {
+          "ms": 101.72000002861023,
+          "rounds": 64
+        },
+        {
+          "ms": 100.4300000667572,
+          "rounds": 64
+        }
+      ]
+    },
+    {
+      "file": "osdb",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 10085684,
+      "compressed": 3977505,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 132.69999980926514,
+          "rounds": 1
+        },
+        {
+          "ms": 134.1100001335144,
+          "rounds": 1
+        },
+        {
+          "ms": 134.12999987602234,
+          "rounds": 1
+        },
+        {
+          "ms": 133.92499995231628,
+          "rounds": 1
+        },
+        {
+          "ms": 133.09499979019165,
+          "rounds": 1
+        },
+        {
+          "ms": 133.47500014305115,
+          "rounds": 1
+        },
+        {
+          "ms": 134.45499992370605,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 6627202,
+      "compressed": 3520792,
+      "rounds": 45,
+      "samples": [
+        {
+          "ms": 99.29500007629395,
+          "rounds": 45
+        },
+        {
+          "ms": 99.79999995231628,
+          "rounds": 45
+        },
+        {
+          "ms": 100.37999987602234,
+          "rounds": 45
+        },
+        {
+          "ms": 100.56500005722046,
+          "rounds": 45
+        },
+        {
+          "ms": 99.68499994277954,
+          "rounds": 45
+        },
+        {
+          "ms": 99.56500005722046,
+          "rounds": 45
+        },
+        {
+          "ms": 99.58999991416931,
+          "rounds": 45
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 6627202,
+      "compressed": 2111095,
+      "rounds": 68,
+      "samples": [
+        {
+          "ms": 99.36500000953674,
+          "rounds": 68
+        },
+        {
+          "ms": 99.99499988555908,
+          "rounds": 68
+        },
+        {
+          "ms": 99.625,
+          "rounds": 68
+        },
+        {
+          "ms": 100.30999994277954,
+          "rounds": 68
+        },
+        {
+          "ms": 98.97500014305115,
+          "rounds": 68
+        },
+        {
+          "ms": 99.8600001335144,
+          "rounds": 68
+        },
+        {
+          "ms": 99.70499992370605,
+          "rounds": 68
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 6627202,
+      "compressed": 6627202,
+      "rounds": 1156,
+      "samples": [
+        {
+          "ms": 100.99499988555908,
+          "rounds": 1156
+        },
+        {
+          "ms": 105.60000014305115,
+          "rounds": 1156
+        },
+        {
+          "ms": 104.31500005722046,
+          "rounds": 1156
+        },
+        {
+          "ms": 105.69000005722046,
+          "rounds": 1156
+        },
+        {
+          "ms": 101.51500010490417,
+          "rounds": 1156
+        },
+        {
+          "ms": 101.46499991416931,
+          "rounds": 1156
+        },
+        {
+          "ms": 101.70499992370605,
+          "rounds": 1156
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 6627202,
+      "compressed": 3520792,
+      "rounds": 52,
+      "samples": [
+        {
+          "ms": 101.92500019073486,
+          "rounds": 52
+        },
+        {
+          "ms": 102.03499984741211,
+          "rounds": 52
+        },
+        {
+          "ms": 101.74000000953674,
+          "rounds": 52
+        },
+        {
+          "ms": 101.79999995231628,
+          "rounds": 52
+        },
+        {
+          "ms": 101.875,
+          "rounds": 52
+        },
+        {
+          "ms": 101.15000009536743,
+          "rounds": 52
+        },
+        {
+          "ms": 101.25999999046326,
+          "rounds": 52
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 6627202,
+      "compressed": 3520792,
+      "rounds": 9,
+      "samples": [
+        {
+          "ms": 104.23000001907349,
+          "rounds": 9
+        },
+        {
+          "ms": 104.03999996185303,
+          "rounds": 9
+        },
+        {
+          "ms": 104.97000002861023,
+          "rounds": 9
+        },
+        {
+          "ms": 103.79500007629395,
+          "rounds": 9
+        },
+        {
+          "ms": 102.49499988555908,
+          "rounds": 9
+        },
+        {
+          "ms": 102.76500010490417,
+          "rounds": 9
+        },
+        {
+          "ms": 102.57500004768372,
+          "rounds": 9
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 6627202,
+      "compressed": 2111095,
+      "rounds": 80,
+      "samples": [
+        {
+          "ms": 100.11999988555908,
+          "rounds": 80
+        },
+        {
+          "ms": 100.00999999046326,
+          "rounds": 80
+        },
+        {
+          "ms": 100.31000018119812,
+          "rounds": 80
+        },
+        {
+          "ms": 100.45000004768372,
+          "rounds": 80
+        },
+        {
+          "ms": 100.26500010490417,
+          "rounds": 80
+        },
+        {
+          "ms": 100.71000003814697,
+          "rounds": 80
+        },
+        {
+          "ms": 99.97000002861023,
+          "rounds": 80
+        }
+      ]
+    },
+    {
+      "file": "reymont",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 6627202,
+      "compressed": 2111095,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 304.8800001144409,
+          "rounds": 1
+        },
+        {
+          "ms": 304.8550000190735,
+          "rounds": 1
+        },
+        {
+          "ms": 304.65500020980835,
+          "rounds": 1
+        },
+        {
+          "ms": 307.1449999809265,
+          "rounds": 1
+        },
+        {
+          "ms": 304.5150001049042,
+          "rounds": 1
+        },
+        {
+          "ms": 303.34999990463257,
+          "rounds": 1
+        },
+        {
+          "ms": 303.77499985694885,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 21606400,
+      "compressed": 7897177,
+      "rounds": 21,
+      "samples": [
+        {
+          "ms": 101.4449999332428,
+          "rounds": 21
+        },
+        {
+          "ms": 100.55499982833862,
+          "rounds": 21
+        },
+        {
+          "ms": 102.11500000953674,
+          "rounds": 21
+        },
+        {
+          "ms": 102.20500016212463,
+          "rounds": 21
+        },
+        {
+          "ms": 101.66499996185303,
+          "rounds": 21
+        },
+        {
+          "ms": 102.02500009536743,
+          "rounds": 21
+        },
+        {
+          "ms": 101.74000000953674,
+          "rounds": 21
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 21606400,
+      "compressed": 6139489,
+      "rounds": 25,
+      "samples": [
+        {
+          "ms": 101.11999988555908,
+          "rounds": 25
+        },
+        {
+          "ms": 100.93999981880188,
+          "rounds": 25
+        },
+        {
+          "ms": 101.00500011444092,
+          "rounds": 25
+        },
+        {
+          "ms": 100.50999999046326,
+          "rounds": 25
+        },
+        {
+          "ms": 101.63499999046326,
+          "rounds": 25
+        },
+        {
+          "ms": 101.48999977111816,
+          "rounds": 25
+        },
+        {
+          "ms": 100.77499985694885,
+          "rounds": 25
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 21606400,
+      "compressed": 21606400,
+      "rounds": 330,
+      "samples": [
+        {
+          "ms": 101.04500007629395,
+          "rounds": 330
+        },
+        {
+          "ms": 99.87999987602234,
+          "rounds": 330
+        },
+        {
+          "ms": 98.89000010490417,
+          "rounds": 330
+        },
+        {
+          "ms": 99.07500004768372,
+          "rounds": 330
+        },
+        {
+          "ms": 99.77499985694885,
+          "rounds": 330
+        },
+        {
+          "ms": 104.68500018119812,
+          "rounds": 330
+        },
+        {
+          "ms": 98.75499987602234,
+          "rounds": 330
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 21606400,
+      "compressed": 7897177,
+      "rounds": 26,
+      "samples": [
+        {
+          "ms": 103.10000014305115,
+          "rounds": 26
+        },
+        {
+          "ms": 103.35500001907349,
+          "rounds": 26
+        },
+        {
+          "ms": 102.71000003814697,
+          "rounds": 26
+        },
+        {
+          "ms": 102.67499995231628,
+          "rounds": 26
+        },
+        {
+          "ms": 102.93500018119812,
+          "rounds": 26
+        },
+        {
+          "ms": 102.875,
+          "rounds": 26
+        },
+        {
+          "ms": 103.0849997997284,
+          "rounds": 26
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 21606400,
+      "compressed": 7897177,
+      "rounds": 5,
+      "samples": [
+        {
+          "ms": 124.4300000667572,
+          "rounds": 5
+        },
+        {
+          "ms": 123.92000007629395,
+          "rounds": 5
+        },
+        {
+          "ms": 124.83500003814697,
+          "rounds": 5
+        },
+        {
+          "ms": 124.96000003814697,
+          "rounds": 5
+        },
+        {
+          "ms": 123.72000002861023,
+          "rounds": 5
+        },
+        {
+          "ms": 123.65000009536743,
+          "rounds": 5
+        },
+        {
+          "ms": 125.03500008583069,
+          "rounds": 5
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 21606400,
+      "compressed": 6139489,
+      "rounds": 31,
+      "samples": [
+        {
+          "ms": 98.99000000953674,
+          "rounds": 31
+        },
+        {
+          "ms": 99.31500005722046,
+          "rounds": 31
+        },
+        {
+          "ms": 99.22000002861023,
+          "rounds": 31
+        },
+        {
+          "ms": 99.85999989509583,
+          "rounds": 31
+        },
+        {
+          "ms": 98.97500014305115,
+          "rounds": 31
+        },
+        {
+          "ms": 99.12000012397766,
+          "rounds": 31
+        },
+        {
+          "ms": 99.26500010490417,
+          "rounds": 31
+        }
+      ]
+    },
+    {
+      "file": "samba",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 21606400,
+      "compressed": 6139489,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 331.80999994277954,
+          "rounds": 1
+        },
+        {
+          "ms": 331.6400001049042,
+          "rounds": 1
+        },
+        {
+          "ms": 333.0499999523163,
+          "rounds": 1
+        },
+        {
+          "ms": 332.75499987602234,
+          "rounds": 1
+        },
+        {
+          "ms": 332.539999961853,
+          "rounds": 1
+        },
+        {
+          "ms": 332.3900001049042,
+          "rounds": 1
+        },
+        {
+          "ms": 331.72499990463257,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 7251944,
+      "compressed": 6595675,
+      "rounds": 45,
+      "samples": [
+        {
+          "ms": 99.20000004768372,
+          "rounds": 45
+        },
+        {
+          "ms": 99.14499998092651,
+          "rounds": 45
+        },
+        {
+          "ms": 99.15499997138977,
+          "rounds": 45
+        },
+        {
+          "ms": 98.63000011444092,
+          "rounds": 45
+        },
+        {
+          "ms": 99.36500000953674,
+          "rounds": 45
+        },
+        {
+          "ms": 99.34500002861023,
+          "rounds": 45
+        },
+        {
+          "ms": 99.00999999046326,
+          "rounds": 45
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 7251944,
+      "compressed": 5735258,
+      "rounds": 56,
+      "samples": [
+        {
+          "ms": 101.42500019073486,
+          "rounds": 56
+        },
+        {
+          "ms": 101.41499996185303,
+          "rounds": 56
+        },
+        {
+          "ms": 101.88000011444092,
+          "rounds": 56
+        },
+        {
+          "ms": 99.75500011444092,
+          "rounds": 56
+        },
+        {
+          "ms": 101.77999997138977,
+          "rounds": 56
+        },
+        {
+          "ms": 101.35500001907349,
+          "rounds": 56
+        },
+        {
+          "ms": 101.83999991416931,
+          "rounds": 56
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 7251944,
+      "compressed": 7251944,
+      "rounds": 1107,
+      "samples": [
+        {
+          "ms": 100.82999992370605,
+          "rounds": 1107
+        },
+        {
+          "ms": 100.82499980926514,
+          "rounds": 1107
+        },
+        {
+          "ms": 101.39999985694885,
+          "rounds": 1107
+        },
+        {
+          "ms": 100.81000018119812,
+          "rounds": 1107
+        },
+        {
+          "ms": 101.40499997138977,
+          "rounds": 1107
+        },
+        {
+          "ms": 101.84500002861023,
+          "rounds": 1107
+        },
+        {
+          "ms": 101.57999992370605,
+          "rounds": 1107
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 7251944,
+      "compressed": 6595675,
+      "rounds": 58,
+      "samples": [
+        {
+          "ms": 100.38000011444092,
+          "rounds": 58
+        },
+        {
+          "ms": 101.46500015258789,
+          "rounds": 58
+        },
+        {
+          "ms": 101.62000012397766,
+          "rounds": 58
+        },
+        {
+          "ms": 101.32500004768372,
+          "rounds": 58
+        },
+        {
+          "ms": 101.18499994277954,
+          "rounds": 58
+        },
+        {
+          "ms": 100.80999994277954,
+          "rounds": 58
+        },
+        {
+          "ms": 101.24000000953674,
+          "rounds": 58
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 7251944,
+      "compressed": 6595675,
+      "rounds": 11,
+      "samples": [
+        {
+          "ms": 106.10999989509583,
+          "rounds": 11
+        },
+        {
+          "ms": 106.21500015258789,
+          "rounds": 11
+        },
+        {
+          "ms": 106.71499991416931,
+          "rounds": 11
+        },
+        {
+          "ms": 106.08999991416931,
+          "rounds": 11
+        },
+        {
+          "ms": 106.65499997138977,
+          "rounds": 11
+        },
+        {
+          "ms": 106.37000012397766,
+          "rounds": 11
+        },
+        {
+          "ms": 106.125,
+          "rounds": 11
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 7251944,
+      "compressed": 5735258,
+      "rounds": 63,
+      "samples": [
+        {
+          "ms": 99.76999998092651,
+          "rounds": 63
+        },
+        {
+          "ms": 100.81499981880188,
+          "rounds": 63
+        },
+        {
+          "ms": 100.62000012397766,
+          "rounds": 63
+        },
+        {
+          "ms": 100.81500005722046,
+          "rounds": 63
+        },
+        {
+          "ms": 101.27500009536743,
+          "rounds": 63
+        },
+        {
+          "ms": 101.10999989509583,
+          "rounds": 63
+        },
+        {
+          "ms": 101.125,
+          "rounds": 63
+        }
+      ]
+    },
+    {
+      "file": "sao",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 7251944,
+      "compressed": 5735258,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 188.3949999809265,
+          "rounds": 1
+        },
+        {
+          "ms": 187.9100000858307,
+          "rounds": 1
+        },
+        {
+          "ms": 188.92000007629395,
+          "rounds": 1
+        },
+        {
+          "ms": 188.50500011444092,
+          "rounds": 1
+        },
+        {
+          "ms": 188.79500007629395,
+          "rounds": 1
+        },
+        {
+          "ms": 188.2850000858307,
+          "rounds": 1
+        },
+        {
+          "ms": 187.91999983787537,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 41458703,
+      "compressed": 20360352,
+      "rounds": 9,
+      "samples": [
+        {
+          "ms": 107.75999999046326,
+          "rounds": 9
+        },
+        {
+          "ms": 108.21000003814697,
+          "rounds": 9
+        },
+        {
+          "ms": 107.79999995231628,
+          "rounds": 9
+        },
+        {
+          "ms": 108.25,
+          "rounds": 9
+        },
+        {
+          "ms": 107.84500002861023,
+          "rounds": 9
+        },
+        {
+          "ms": 107.81500005722046,
+          "rounds": 9
+        },
+        {
+          "ms": 107.75,
+          "rounds": 9
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 41458703,
+      "compressed": 14001448,
+      "rounds": 10,
+      "samples": [
+        {
+          "ms": 109.75499987602234,
+          "rounds": 10
+        },
+        {
+          "ms": 109.76500010490417,
+          "rounds": 10
+        },
+        {
+          "ms": 109.1650002002716,
+          "rounds": 10
+        },
+        {
+          "ms": 110.48499989509583,
+          "rounds": 10
+        },
+        {
+          "ms": 109.33500003814697,
+          "rounds": 10
+        },
+        {
+          "ms": 109.10500001907349,
+          "rounds": 10
+        },
+        {
+          "ms": 109.28499984741211,
+          "rounds": 10
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 41458703,
+      "compressed": 41458703,
+      "rounds": 165,
+      "samples": [
+        {
+          "ms": 99.75999999046326,
+          "rounds": 165
+        },
+        {
+          "ms": 101.0149998664856,
+          "rounds": 165
+        },
+        {
+          "ms": 99.42500019073486,
+          "rounds": 165
+        },
+        {
+          "ms": 101.03000020980835,
+          "rounds": 165
+        },
+        {
+          "ms": 99.56500005722046,
+          "rounds": 165
+        },
+        {
+          "ms": 100.3050000667572,
+          "rounds": 165
+        },
+        {
+          "ms": 99.13000011444092,
+          "rounds": 165
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 41458703,
+      "compressed": 20360352,
+      "rounds": 10,
+      "samples": [
+        {
+          "ms": 100.24499988555908,
+          "rounds": 10
+        },
+        {
+          "ms": 100.34999990463257,
+          "rounds": 10
+        },
+        {
+          "ms": 100.22000002861023,
+          "rounds": 10
+        },
+        {
+          "ms": 101.25500011444092,
+          "rounds": 10
+        },
+        {
+          "ms": 100.38000011444092,
+          "rounds": 10
+        },
+        {
+          "ms": 100.5699999332428,
+          "rounds": 10
+        },
+        {
+          "ms": 100.36500000953674,
+          "rounds": 10
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 41458703,
+      "compressed": 20360352,
+      "rounds": 2,
+      "samples": [
+        {
+          "ms": 153.2149999141693,
+          "rounds": 2
+        },
+        {
+          "ms": 153.96000003814697,
+          "rounds": 2
+        },
+        {
+          "ms": 153.3199999332428,
+          "rounds": 2
+        },
+        {
+          "ms": 153.57499980926514,
+          "rounds": 2
+        },
+        {
+          "ms": 152.6599998474121,
+          "rounds": 2
+        },
+        {
+          "ms": 152.72499990463257,
+          "rounds": 2
+        },
+        {
+          "ms": 153.31499981880188,
+          "rounds": 2
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 41458703,
+      "compressed": 14001448,
+      "rounds": 12,
+      "samples": [
+        {
+          "ms": 102.63000011444092,
+          "rounds": 12
+        },
+        {
+          "ms": 101.97500014305115,
+          "rounds": 12
+        },
+        {
+          "ms": 102.25,
+          "rounds": 12
+        },
+        {
+          "ms": 102.96499991416931,
+          "rounds": 12
+        },
+        {
+          "ms": 102.9850001335144,
+          "rounds": 12
+        },
+        {
+          "ms": 102.3899998664856,
+          "rounds": 12
+        },
+        {
+          "ms": 102.70000004768372,
+          "rounds": 12
+        }
+      ]
+    },
+    {
+      "file": "webster",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 41458703,
+      "compressed": 14001448,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 974.6800000667572,
+          "rounds": 1
+        },
+        {
+          "ms": 975.2699999809265,
+          "rounds": 1
+        },
+        {
+          "ms": 976.8650000095367,
+          "rounds": 1
+        },
+        {
+          "ms": 977.4500000476837,
+          "rounds": 1
+        },
+        {
+          "ms": 973.1699998378754,
+          "rounds": 1
+        },
+        {
+          "ms": 973.6449999809265,
+          "rounds": 1
+        },
+        {
+          "ms": 973.5,
+          "rounds": 1
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 5345280,
+      "compressed": 1288300,
+      "rounds": 90,
+      "samples": [
+        {
+          "ms": 100.75999999046326,
+          "rounds": 90
+        },
+        {
+          "ms": 100.76999998092651,
+          "rounds": 90
+        },
+        {
+          "ms": 101.34999990463257,
+          "rounds": 90
+        },
+        {
+          "ms": 100.57000017166138,
+          "rounds": 90
+        },
+        {
+          "ms": 101.60500001907349,
+          "rounds": 90
+        },
+        {
+          "ms": 100.64499998092651,
+          "rounds": 90
+        },
+        {
+          "ms": 101.69000005722046,
+          "rounds": 90
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 5345280,
+      "compressed": 770055,
+      "rounds": 135,
+      "samples": [
+        {
+          "ms": 94.08999991416931,
+          "rounds": 135
+        },
+        {
+          "ms": 94.99000000953674,
+          "rounds": 135
+        },
+        {
+          "ms": 93.42000007629395,
+          "rounds": 135
+        },
+        {
+          "ms": 88.5550000667572,
+          "rounds": 135
+        },
+        {
+          "ms": 96.25500011444092,
+          "rounds": 135
+        },
+        {
+          "ms": 95.61999988555908,
+          "rounds": 135
+        },
+        {
+          "ms": 93.58999991416931,
+          "rounds": 135
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 5345280,
+      "compressed": 5345280,
+      "rounds": 1439,
+      "samples": [
+        {
+          "ms": 98.90499997138977,
+          "rounds": 1439
+        },
+        {
+          "ms": 98.94000005722046,
+          "rounds": 1439
+        },
+        {
+          "ms": 100.12999987602234,
+          "rounds": 1439
+        },
+        {
+          "ms": 98.15000009536743,
+          "rounds": 1439
+        },
+        {
+          "ms": 99.80999994277954,
+          "rounds": 1439
+        },
+        {
+          "ms": 100.11500000953674,
+          "rounds": 1439
+        },
+        {
+          "ms": 98.9449999332428,
+          "rounds": 1439
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 5345280,
+      "compressed": 1288300,
+      "rounds": 113,
+      "samples": [
+        {
+          "ms": 100.2649998664856,
+          "rounds": 113
+        },
+        {
+          "ms": 99.77999997138977,
+          "rounds": 113
+        },
+        {
+          "ms": 99.82999992370605,
+          "rounds": 113
+        },
+        {
+          "ms": 99.50999999046326,
+          "rounds": 113
+        },
+        {
+          "ms": 99.74000000953674,
+          "rounds": 113
+        },
+        {
+          "ms": 99.62999987602234,
+          "rounds": 113
+        },
+        {
+          "ms": 100.46499991416931,
+          "rounds": 113
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 5345280,
+      "compressed": 1288300,
+      "rounds": 22,
+      "samples": [
+        {
+          "ms": 103.81500005722046,
+          "rounds": 22
+        },
+        {
+          "ms": 104.61999988555908,
+          "rounds": 22
+        },
+        {
+          "ms": 102.80999994277954,
+          "rounds": 22
+        },
+        {
+          "ms": 104.17000007629395,
+          "rounds": 22
+        },
+        {
+          "ms": 105.54499983787537,
+          "rounds": 22
+        },
+        {
+          "ms": 104.47499990463257,
+          "rounds": 22
+        },
+        {
+          "ms": 104.73000001907349,
+          "rounds": 22
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 5345280,
+      "compressed": 770055,
+      "rounds": 186,
+      "samples": [
+        {
+          "ms": 100.26999998092651,
+          "rounds": 186
+        },
+        {
+          "ms": 100.78499984741211,
+          "rounds": 186
+        },
+        {
+          "ms": 98.86999988555908,
+          "rounds": 186
+        },
+        {
+          "ms": 100.1949999332428,
+          "rounds": 186
+        },
+        {
+          "ms": 99.57999992370605,
+          "rounds": 186
+        },
+        {
+          "ms": 100.17999982833862,
+          "rounds": 186
+        },
+        {
+          "ms": 99.65499997138977,
+          "rounds": 186
+        }
+      ]
+    },
+    {
+      "file": "xml",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 5345280,
+      "compressed": 770055,
+      "rounds": 2,
+      "samples": [
+        {
+          "ms": 128.54500007629395,
+          "rounds": 2
+        },
+        {
+          "ms": 128.06000018119812,
+          "rounds": 2
+        },
+        {
+          "ms": 126.60500001907349,
+          "rounds": 2
+        },
+        {
+          "ms": 128.2299997806549,
+          "rounds": 2
+        },
+        {
+          "ms": 127.86999988555908,
+          "rounds": 2
+        },
+        {
+          "ms": 128.4800000190735,
+          "rounds": 2
+        },
+        {
+          "ms": 127.89499998092651,
+          "rounds": 2
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "stock",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 8474240,
+      "compressed": 8163278,
+      "rounds": 84,
+      "samples": [
+        {
+          "ms": 99.98000001907349,
+          "rounds": 84
+        },
+        {
+          "ms": 98.70499992370605,
+          "rounds": 84
+        },
+        {
+          "ms": 98.60500001907349,
+          "rounds": 84
+        },
+        {
+          "ms": 101.52500009536743,
+          "rounds": 84
+        },
+        {
+          "ms": 98.36500000953674,
+          "rounds": 84
+        },
+        {
+          "ms": 102.0149998664856,
+          "rounds": 84
+        },
+        {
+          "ms": 99.66000008583069,
+          "rounds": 84
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "stock",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 8474240,
+      "compressed": 7175001,
+      "rounds": 43,
+      "samples": [
+        {
+          "ms": 101.10500001907349,
+          "rounds": 43
+        },
+        {
+          "ms": 100.65499997138977,
+          "rounds": 43
+        },
+        {
+          "ms": 99.90000009536743,
+          "rounds": 43
+        },
+        {
+          "ms": 97.75,
+          "rounds": 43
+        },
+        {
+          "ms": 99.94000005722046,
+          "rounds": 43
+        },
+        {
+          "ms": 99.85000014305115,
+          "rounds": 43
+        },
+        {
+          "ms": 100.21000003814697,
+          "rounds": 43
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "patched",
+      "codec": "memcpy",
+      "direction": "copy",
+      "bytes": 8474240,
+      "compressed": 8474240,
+      "rounds": 861,
+      "samples": [
+        {
+          "ms": 99.22000002861023,
+          "rounds": 861
+        },
+        {
+          "ms": 101.41000008583069,
+          "rounds": 861
+        },
+        {
+          "ms": 99.58000016212463,
+          "rounds": 861
+        },
+        {
+          "ms": 98.70000004768372,
+          "rounds": 861
+        },
+        {
+          "ms": 98.77999997138977,
+          "rounds": 861
+        },
+        {
+          "ms": 99.08500003814697,
+          "rounds": 861
+        },
+        {
+          "ms": 99.00500011444092,
+          "rounds": 861
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "decompress",
+      "bytes": 8474240,
+      "compressed": 8163278,
+      "rounds": 123,
+      "samples": [
+        {
+          "ms": 99.73499989509583,
+          "rounds": 123
+        },
+        {
+          "ms": 99.27500009536743,
+          "rounds": 123
+        },
+        {
+          "ms": 98.78999996185303,
+          "rounds": 123
+        },
+        {
+          "ms": 100.12000012397766,
+          "rounds": 123
+        },
+        {
+          "ms": 98.38000011444092,
+          "rounds": 123
+        },
+        {
+          "ms": 99.48499989509583,
+          "rounds": 123
+        },
+        {
+          "ms": 98.65000009536743,
+          "rounds": 123
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "patched",
+      "codec": "default",
+      "direction": "compress",
+      "bytes": 8474240,
+      "compressed": 8163278,
+      "rounds": 18,
+      "samples": [
+        {
+          "ms": 101.8899998664856,
+          "rounds": 18
+        },
+        {
+          "ms": 101.85000014305115,
+          "rounds": 18
+        },
+        {
+          "ms": 101.11999988555908,
+          "rounds": 18
+        },
+        {
+          "ms": 100.96499991416931,
+          "rounds": 18
+        },
+        {
+          "ms": 100.83500003814697,
+          "rounds": 18
+        },
+        {
+          "ms": 100.95000004768372,
+          "rounds": 18
+        },
+        {
+          "ms": 100.88499999046326,
+          "rounds": 18
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "decompress",
+      "bytes": 8474240,
+      "compressed": 7175001,
+      "rounds": 56,
+      "samples": [
+        {
+          "ms": 100.59999990463257,
+          "rounds": 56
+        },
+        {
+          "ms": 100.54500007629395,
+          "rounds": 56
+        },
+        {
+          "ms": 100.10999989509583,
+          "rounds": 56
+        },
+        {
+          "ms": 100.12000012397766,
+          "rounds": 56
+        },
+        {
+          "ms": 99.67000007629395,
+          "rounds": 56
+        },
+        {
+          "ms": 100.96499991416931,
+          "rounds": 56
+        },
+        {
+          "ms": 99.96500015258789,
+          "rounds": 56
+        }
+      ]
+    },
+    {
+      "file": "x-ray",
+      "variant": "patched",
+      "codec": "hc9",
+      "direction": "compress",
+      "bytes": 8474240,
+      "compressed": 7175001,
+      "rounds": 1,
+      "samples": [
+        {
+          "ms": 151.49499988555908,
+          "rounds": 1
+        },
+        {
+          "ms": 151.10000014305115,
+          "rounds": 1
+        },
+        {
+          "ms": 151.42499995231628,
+          "rounds": 1
+        },
+        {
+          "ms": 150.75,
+          "rounds": 1
+        },
+        {
+          "ms": 150.93499994277954,
+          "rounds": 1
+        },
+        {
+          "ms": 151.10999989509583,
+          "rounds": 1
+        },
+        {
+          "ms": 151.2300000190735,
+          "rounds": 1
+        }
+      ]
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+  "isolated": true,
+  "date": "2026-09-20T12:26:11.421Z"
+}

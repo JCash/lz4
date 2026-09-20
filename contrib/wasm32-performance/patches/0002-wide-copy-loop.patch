@@ -1,0 +1,29 @@
+--- a/lib/lz4.c
++++ b/lib/lz4.c
+@@ -511,7 +511,7 @@
+ }
+ 
+ 
+-#ifdef __aarch64__
++#if defined(__aarch64__) || defined(__wasm32__)
+ /* customized variant of memcpy, which can overwrite up to 64 bytes beyond dstEnd */
+ LZ4_FORCE_INLINE void
+ LZ4_wildCopy64(void* dstPtr, const void* srcPtr, void* dstEnd)
+@@ -2105,7 +2105,7 @@
+ 
+                 /* copy literals */
+                 LZ4_STATIC_ASSERT(MFLIMIT >= WILDCOPYLENGTH);
+-              #ifdef __aarch64__
++              #if defined(__aarch64__) || defined(__wasm32__)
+                 if ((cpy>oend-64) || (ip+length>iend-64)) { goto safe_literal_copy; }
+                 LZ4_wildCopy64(op, ip, cpy);
+               #else
+@@ -2208,7 +2208,7 @@
+             assert((op <= oend) && (oend-op >= 64));
+             if (unlikely(offset<16)) {
+                 LZ4_memcpy_using_offset(op, match, cpy, offset);
+-    #ifdef __aarch64__
++    #if defined(__aarch64__) || defined(__wasm32__)
+             } else if (offset >= 64) {
+                 LZ4_wildCopy64(op, match, cpy);
+     #endif
