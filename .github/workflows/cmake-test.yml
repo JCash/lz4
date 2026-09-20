@@ -29,7 +29,8 @@ jobs:
           - os: ubuntu-latest
             build_type: Debug
             generator: ""
-          - os: windows-latest
+          # Match the explicitly selected Visual Studio 2022 generator.
+          - os: windows-2022
             build_type: Release
             generator: '-G "Visual Studio 17 2022" -A x64'
           - os: macos-latest
